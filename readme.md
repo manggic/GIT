@@ -182,6 +182,9 @@ git checkout -b old-state 0d1d7fc32
 # Don't do it if you have uncommitted work you want to keep.
 git reset --hard 0d1d7fc32
 
+#To change the above hard reset to remote
+git push -f origin master
+
 # Alternatively, if there's work to keep:
 git stash
 git reset --hard 0d1d7fc32
