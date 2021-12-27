@@ -57,6 +57,13 @@ $ git branch -a
 
 # Delete a branch
 $ git branch -d <branch_name>
+
+# Delete a branch forcefully
+$ git branch -D [branch name]
+
+# Delete a remote branch
+$ git push origin --delete [branch name]
+
 ```
 
 8) git checkout
@@ -67,6 +74,9 @@ $ git checkout <branch_name>
 
 # Checkout and create a new branch with that name
 $ git checkout -b <new_branch>
+
+# Rename a local branch
+$ git branch -m [old branch name] [new branch name]
 ```
 
 9) git merge
@@ -126,6 +136,15 @@ $ git log --<after/before/since/until>=<date>
 
 # Show git log based on commit author
 $ git log --<author>="Author Name"
+
+# View changes (detailed)
+$ git log --summary	
+
+# Preview changes before merging
+$ git diff [source branch] [target branch]	
+
+# Revert commit changes
+$ git revert commitid	
 ```
 
 15) git rm
