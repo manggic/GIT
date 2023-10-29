@@ -68,8 +68,17 @@ $ git push origin -d <branch_name>
 ```
 
 **git checkout**
-- To start working in a different branch, use git checkout to switch branches.
+- It's use for 
+  - Switch between branches.
+  - Check out a specific commit to see the code at that point in time.
+  - Restore a file to a previous state.
 ```
+# Check out the specific commit
+$ git checkout <commit_id>
+
+# After examining the code at the specific commit, making changes you want to go back to the feature-branch.
+$ git checkout feature-branch
+
 # Checkout an existing branch
 $ git checkout <branch_name>
 
