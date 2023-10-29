@@ -229,54 +229,33 @@ For example, if you want to recover a deleted branch, you can use git reflog to 
 git branch <new-branch-name> <commit-hash>
 ```
 
-<hr>
+**git diff**
+- Git command used to display the differences between various states of your Git repository. It allows you to compare changes between different commits, between the working directory and the staging area, or between different branches or commits. git diff is a powerful tool for reviewing and understanding the differences in your project's source code.
 
-**git rm**
-- Remove files or directories from the working index (staging area). With git rm, there are two options to keep in mind: force and cached. Running the command with force deletes the file. The cached command removes the file from the working index. When removing an entire directory, a recursive command is necessary.
 ```
-# To remove a file from the working index (cached):
-$ git rm --cached <file name>
+# Compare the current working tree to the last commit
+$ git diff
 
-# To delete a file (force):
-$ git rm -f <file name>
+# Compare the current working tree to the HEAD commit
+$ git diff HEAD
 
-# To remove an entire directory from the working index (cached):
-$ git rm -r --cached <directory name>
+# Compare the file `foo.txt` to the last commit
+$ git diff foo.txt
 
-# To delete an entire directory (force):
-$ git rm -r -f <file name>
-```
+# Compare the file `foo.txt` to the HEAD commit
+$ git diff HEAD foo.txt
 
-**Temporarily switch to a different commit**
-- If you want to temporarily go back to it, fool around, then come back to where you are, all you have to do is check out the desired commit:
-```
-# This will detach your HEAD, that is, leave you with no branch checked out:
-git checkout 0d1d7fc32
-```
+# Compare the branch `master` to the current working tree
+$ git diff master
 
-- To go back to where you were, just check out the branch you were on again. (If you've made changes, as always when switching branches, you'll have to deal with them as appropriate. You could reset to throw them away; you could stash, checkout, stash pop to take them with you; you could commit them to a branch there if you want a branch there.)
-```
-git checkout -b old-state 0d1d7fc32
+# Compare the branch `master` to the HEAD commit
+$ git diff HEAD master
+
+# Compare the changes between two specific commits
+$ git diff <commit1> <commit2>
+
 ```
 
-**Hard delete unpublished commits**
-- If, on the other hand, you want to really get rid of everything you've done since then, there are two possibilities. One, if you haven't published any of these commits, simply reset:
-```
-# This will destroy any local modifications.
-# Don't do it if you have uncommitted work you want to keep.
-git reset --hard 0d1d7fc32
-
-#To change the above hard reset to remote
-git push -f origin master
-
-# Alternatively, if there's work to keep:
-git stash
-git reset --hard 0d1d7fc32
-git stash pop
-# This saves the modifications, then reapplies that patch after resetting.
-# You could get merge conflicts, if you've modified things which were
-# changed since the commit you reset to.
-```
 
 
 
