@@ -187,6 +187,9 @@ By default, the git log command displays a commit hash, the commit message, and 
 ```
 # Show entire git log
 $ git log
+
+# Show one-line summary of each commit
+$ git log --oneline
 ```
 
 ```
@@ -270,6 +273,9 @@ $ git diff HEAD master
 $ git diff <commit1> <commit2>
 
 ```
+### interactive rebase
+[git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0)
+
 
 
 
