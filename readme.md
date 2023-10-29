@@ -70,7 +70,7 @@ $ git push origin -d <branch_name>
 **git checkout**
 - It's use for 
   - Switch between branches.
-  - Check out a specific commit to see the code at that point in time.
+  - Check out a specific commit to see the code at that point in time.`You are now in a "detached HEAD" state, meaning you're not on a branch but directly at the commit. You can review the code, test it, or compare it with the current state.`
   - Restore a file to a previous state.
 ```
 # Check out the specific commit
@@ -87,6 +87,12 @@ $ git checkout -b <new_branch>
 
 # Rename a local branch
 $ git branch -m [old branch name] [new branch name]
+
+# To discard all uncommitted changes in your working directory
+$ git checkout .
+
+# switch back to the branch you were on previously
+$ git checkout -
 ```
 
 **git merge**
