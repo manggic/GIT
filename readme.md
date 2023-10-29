@@ -126,6 +126,17 @@ git show <commit>
 
 <hr>
 
+
+**git stash**
+- The git stash command saves your uncommitted changes (both staged and unstaged) away for later use, and then reverts them from your working copy.
+You might use `git stash` if you want to temporarily switch branches without committing your changes to the current branch.
+
+
+```
+// List all of your stashed changes.
+git stash list
+```
+
 **git stash**
 - To save changes made when they’re not in a state to commit them to a repository. This will store the work and give a clean working directory. For instance, when working on a new feature that’s not complete, but an urgent bug needs attention.
 ```
