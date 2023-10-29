@@ -124,50 +124,66 @@ $ git push origin staging
 git show <commit>
 ```
 
-<hr>
-
-
 **git stash**
 - The git stash command saves your uncommitted changes (both staged and unstaged) away for later use, and then reverts them from your working copy.
 You might use `git stash` if you want to temporarily switch branches without committing your changes to the current branch.
 
 
 ```
-// List all of your stashed changes.
-git stash list
+# This will save your changes to a local stash
+$ git stash 
 ```
 
-**git stash**
-- To save changes made when they’re not in a state to commit them to a repository. This will store the work and give a clean working directory. For instance, when working on a new feature that’s not complete, but an urgent bug needs attention.
 ```
-# Store current work with untracked files
-$ git stash -u
+# List all of your stashed changes
+$ git stash list
+```
 
-# Bring stashed work back to the working directory
+```
+# To see changes made in a stash
+$ git stash show -p <stash_name>
+```
+
+```
+# To retrieve your stashed changes
+$ git stash apply
 $ git stash pop
 ```
 
+```
+# Clear all of your stashed changes
+$ git stash clear
+```
+
+```
+# Drop a specific stashed change
+$ git stash drop <stash_name>
+```
+
+```
+# To apply a specific stash, you can specify it by name
+$ git stash apply stash@{1}
+```
+
 **git log**
-- To show the chronological commit history for a repository. This helps give context and history for a repository. git log is available immediately on a recently cloned repository to see history.
+- Displays a record of the commits in a Git repository.
+By default, the git log command displays a commit hash, the commit message, and other commit metadata
+
 ```
 # Show entire git log
 $ git log
-
-# Show git log with date pameters
-$ git log --<after/before/since/until>=<date>
-
-# Show git log based on commit author
-$ git log --<author>="Author Name"
-
-# View changes (detailed)
-$ git log --summary	
-
-# Preview changes before merging
-$ git diff [source branch] [target branch]	
-
-# Revert commit changes
-$ git revert commitid	
 ```
+
+```
+# To display the first 10 commits 
+$ git log -10
+```
+
+
+**git reset**
+- Git reset is a command that moves the current head of the branch back to a specified commit. This can be used to `undo commits that have not been pushed to a remote repository`.
+
+<hr>
 
 **git rm**
 - Remove files or directories from the working index (staging area). With git rm, there are two options to keep in mind: force and cached. Running the command with force deletes the file. The cached command removes the file from the working index. When removing an entire directory, a recursive command is necessary.
