@@ -182,7 +182,7 @@ $ git log -10
 
 **git reset**
 - Git reset is a command that moves the current head of the branch back to a specified commit. This can be used to `undo commits that have not been pushed to a remote repository`.
-
+It is important to note that git reset is a local operation and does not affect the remote repository. If you have already pushed the commits that you want to undo, you should use git revert instead.
 <hr>
 
 **git rm**
