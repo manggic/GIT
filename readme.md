@@ -207,6 +207,28 @@ $ git reset --hard v1.0.0
 
 Note : `It is important to note that git reset is a local operation and does not affect the remote repository. If you have already pushed the commits that you want to undo, you should use git revert instead.`
 
+**git revert**
+- Git command that is used to create a new commit that undoes the changes made in a previous commit. This is a safe way to reverse changes without altering the project's commit history, making it a useful tool for fixing mistakes or undoing unwanted changes.
+
+
+```
+$ git revert <commit-hash>
+```
+
+**git reflog**
+- Git command that stands for "reference log." It's a useful tool for tracking and recovering your project's history, including changes to branch references, commits, and other Git operations. The git reflog command displays a log of reference updates in your repository, helping you recover lost commits or branches.
+
+```
+git reflog
+```
+
+- <b>Recovering Lost Commits or Branches</b> :If you accidentally deleted a branch or lost a commit, git reflog can help you identify the reference or commit you want to recover.
+For example, if you want to recover a deleted branch, you can use git reflog to find the commit hash before the branch was deleted, and then create a new branch using that commit hash.
+
+```
+git branch <new-branch-name> <commit-hash>
+```
+
 <hr>
 
 **git rm**
