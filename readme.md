@@ -311,6 +311,8 @@ $ git commit --amend --no-edit
 [git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0)
 [interaction rebase doc](https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/)
 
+[rewriting git history](https://www.atlassian.com/git/tutorials/rewriting-history#:~:text=You%20can%20add%20or%20remove,shared%20with%20other%20team%20members.)
+
 
 
 
