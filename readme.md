@@ -319,23 +319,30 @@ $ git commit --amend --no-edit
 # commit id will be of before the commit_id where need to be changed (just below the target commit id)
 $ git rebase -i <commit_id> 
 ```
+![change_old_commit_msg](/images/change_the_commit_msg_1.png)
+![change_old_commit_msg](/images/change_the_commit_msg_2.png)
+![change_old_commit_msg](/images/change_the_commit_msg_3.png)
 <b>For changing old commit msg : </b>
 `
 An editor window will now open, containing a list of the commits that you just selected for manipulation.
-One other important thing to note about this editor window: you don't perform the actual manipulations here! Or, in this concrete example, you do NOT go ahead and change the commit message here. Instead, you only mark the commit you want to change with an action keyword. In our case, because we want to change a commit’s message, we mark the line with "reword". If you then save and close this editor window, a new one will open, containing the old commit’s message. Now is the time to finally make your changes:
+One other important thing to note about this editor window: you don't perform the actual manipulations here! Or, in this concrete example, you do NOT go ahead and change the commit message here. Instead, you only mark the commit you want to change with an action keyword. In our case, because we want to change a commit’s message, we mark the line with "reword". If you then save and close this editor window, a new one will open, containing the old commit’s message. Now is the time to finally make your changes
 `
 
+![combining_multi_commit_into_single](/images/combining_multi_commit_into_single_1.png)
+![combining_multi_commit_into_single](/images/combining_multi_commit_into_single_2.png)
+![combining_multi_commit_into_single](/images/combining_multi_commit_into_single_3.png)
 <b>For merging many commit into single commit : </b> 
 `
 Again, an editor window will open, listing that part of our commit history that we want to manipulate:
+The action keyword we are going to use here is called "squash." And there's only one important piece of information you need to know about squash in order to use it: the line we mark up with the "squash" keyword will be combined with the line directly above. That’s why, as you can see in my screenshot above, I’ve marked line #2 with "squash" in order to combine it with line #1.
+We can now save and close the editor window and again watch and a new window appear: we are now asked to provide a commit message for the new commit that is created when combining those two old ones.
 `
 
 
 
-[git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0)
-[interaction rebase doc](https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/)
-
-[rewriting git history](https://www.atlassian.com/git/tutorials/rewriting-history#:~:text=You%20can%20add%20or%20remove,shared%20with%20other%20team%20members.)
+[git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0) <br>
+[interaction rebase doc](https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/) <br>
+[rewriting git history](https://www.atlassian.com/git/tutorials/rewriting-history#:~:text=You%20can%20add%20or%20remove,shared%20with%20other%20team%20members.) <br>
 
 
 
