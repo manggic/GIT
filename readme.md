@@ -274,6 +274,15 @@ $ git diff <commit1> <commit2>
 
 ```
 
+**git rebase**
+- Git rebase is a way to integrate changes from one branch into another while making it appear as if those changes were made on top of the current branch. It's like taking the changes from one branch and putting them on top of another branch's changes.
+
+```
+git checkout feature
+git rebase main
+```
+- This takes the changes from the feature branch and applies them on top of the latest commit in the main branch.
+
 **git commit --amend**
 - This command is a convenient way to modify the most recent commit. It lets you combine staged changes with the previous commit instead of creating an entirely new commit.
 
@@ -305,6 +314,21 @@ $ git commit --amend --no-edit
      - Resolve Conflicts: Just like a regular rebase, you'll need to resolve conflicts if they occur during the interactive rebase process.
 - If we were talking about the very last commit, we could have simply used the --amend option of the git commit command 
 
+
+```
+# commit id will be of before the commit_id where need to be changed (just below the target commit id)
+$ git rebase -i <commit_id> 
+```
+<b>For changing old commit msg : </b>
+`
+An editor window will now open, containing a list of the commits that you just selected for manipulation.
+One other important thing to note about this editor window: you don't perform the actual manipulations here! Or, in this concrete example, you do NOT go ahead and change the commit message here. Instead, you only mark the commit you want to change with an action keyword. In our case, because we want to change a commit’s message, we mark the line with "reword". If you then save and close this editor window, a new one will open, containing the old commit’s message. Now is the time to finally make your changes:
+`
+
+<b>For merging many commit into single commit : </b> 
+`
+Again, an editor window will open, listing that part of our commit history that we want to manipulate:
+`
 
 
 
