@@ -274,6 +274,19 @@ $ git diff <commit1> <commit2>
 
 ```
 ### interactive rebase
+- Interactive rebasing allows you to interactively rework your commit history before merging it into another branch.
+- `Mind the word "local": it should only be used for cleaning up your own, local commit history, for example before integrating one of your feature branches into a team branch. In contrast, it should NOT be used on commit history that has already been pushed and shared on a remote repository. Interactive rebase is one of those tools that "rewrite" Git history – and you shouldn't do this on commits that have already been shared with others.`
+- With interactive rebasing, you can:
+     - Edit Commits: You can change commit messages, make small changes to the content of commits, or even split and combine commits.
+     - Reorder Commits: Change the order of commits in your branch to provide a more logical and coherent history.
+     - Squash Commits: Combine multiple commits into one, which is useful for collapsing a series of small, related commits into a single, more meaningful commit.
+     - Drop Commits: Remove commits that you no longer want to include in your branch's history.
+     - Resolve Conflicts: Just like a regular rebase, you'll need to resolve conflicts if they occur during the interactive rebase process.
+
+
+
+
+
 [git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0)
 
 
