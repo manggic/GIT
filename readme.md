@@ -273,6 +273,27 @@ $ git diff HEAD master
 $ git diff <commit1> <commit2>
 
 ```
+
+**git commit --amend**
+- This command is a convenient way to modify the most recent commit. It lets you combine staged changes with the previous commit instead of creating an entirely new commit.
+
+```
+# change commit message of recently last commit
+$ git commit --amend -m "an updated commit message"
+```
+- Let's say we've edited a few files that we would like to commit in a single snapshot, but then we forget to add one of the files the first time around. Fixing the error is simply a matter of staging the other file and committing with the --amend flag
+
+```
+# Edit hello.py and main.py
+$ git add hello.py
+$ git commit 
+# Realize you forgot to add the changes from main.py 
+$ git add main.py 
+$ git commit --amend --no-edit
+```
+`The --no-edit flag will allow you to make the amendment to your commit without changing its commit message. The resulting commit will replace the incomplete one, and it will look like we committed the changes to hello.py and main.py in a single snapshot.`
+
+
 ### interactive rebase
 - Interactive rebasing allows you to interactively rework your commit history before merging it into another branch.
 - `Mind the word "local": it should only be used for cleaning up your own, local commit history, for example before integrating one of your feature branches into a team branch. In contrast, it should NOT be used on commit history that has already been pushed and shared on a remote repository. Interactive rebase is one of those tools that "rewrite" Git history – and you shouldn't do this on commits that have already been shared with others.`
@@ -282,12 +303,13 @@ $ git diff <commit1> <commit2>
      - Squash Commits: Combine multiple commits into one, which is useful for collapsing a series of small, related commits into a single, more meaningful commit.
      - Drop Commits: Remove commits that you no longer want to include in your branch's history.
      - Resolve Conflicts: Just like a regular rebase, you'll need to resolve conflicts if they occur during the interactive rebase process.
-
+- If we were talking about the very last commit, we could have simply used the --amend option of the git commit command 
 
 
 
 
 [git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0)
+[interaction rebase doc](https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/)
 
 
 
