@@ -339,6 +339,42 @@ We can now save and close the editor window and again watch and a new window app
 `
 
 
+**git cherry-pick**
+- The "cherry-pick" command is a Git feature that allows you to pick and apply specific commits from one branch to another. It's a useful tool when you want to select specific changes from one branch and apply them to another without merging the entire branch. Cherry-picking is often used when you want to apply specific bug fixes or features from one branch to another, and you don't want to bring in all the changes from the source branch.
+
+```
+# switch to branch in which u want to fetch the changes
+$ git checkout <branch_name>
+
+# commit_id of the branch u want to pick the changes
+$ git cherry-pick <commit_id>
+
+# to abort after getting conflicts during a cherry-pick operation
+$ git cherry-pick --abort
+
+# fetch multiple commits from one branch and apply them to another
+$ git cherry-pick <commit-hash-1> <commit-hash-2> <commit-hash-3>
+
+```
+
+- if u get conflict while cherry pick, u can resolve it and add it into staging
+```
+git add filename
+```  
+- After resolving the conflict and staging the changes, you can continue the cherry-pick operation using the following command
+```
+git cherry-pick --continue
+```
+
+- To remove the commit from the source branch
+```
+$ git checkout source-branch
+$ git reset --hard HEAD~1
+```
+`The HEAD~1 refers to the commit before the last one, effectively removing the last commit from the branch.`
+
+
+
 
 [git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0) <br>
 [interaction rebase doc](https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/) <br>
