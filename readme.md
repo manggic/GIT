@@ -388,7 +388,35 @@ $ git reset --hard HEAD~1
 ```
 `The HEAD~1 refers to the commit before the last one, effectively removing the last commit from the branch.`
 
+```
+# To check what's inside proj config 
+$ cat .git/config
+```
 
+**git submodule**
+- Git submodules are a way to include one Git repository as a subdirectory inside another Git repository.
+Submodules are useful when you want to incorporate external code or libraries into your project while keeping those components in their separate repositories and versions.
+Git records information about the submodule, such as its URL and the path where it's located within your repository. This information is stored in a file named .gitmodules in the root of your repository.
+
+```
+# Adds a submodule to your repository
+$ git submodule add <repository_url>
+
+# Clones a repository with submodules, ensuring that the submodules are also cloned and initialized.
+$ git clone --recurse-submodules <repository_url>
+
+# Lists the submodules, their current commits, and their paths in the parent repository.
+$ git submodule status
+
+# Updates the submodules to their latest commits by fetching changes from the submodule repositories.
+$ git submodule update --remote
+
+# Initializes the submodules listed in the .gitmodules file.
+$ git submodule init
+
+# Fetches the submodule contents and checks out the specific commit or branch mentioned in the parent repository.
+$ git submodule update
+```
 
 
 [git advance topic link](https://youtu.be/qsTthZi23VE?si=vyB1BYmJjBI-9Ci0) <br>
