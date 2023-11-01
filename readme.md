@@ -49,11 +49,26 @@ $ git config user.name "Brian Kerr"
 **git branch**
 - To determine what branch the local repository is on, add a new branch, or delete a branch.
 ```
+# List all local branches 
+$ git branch
+
+# List both local and remote branches
+$ git branch -a
+
+# List remote branches from the remote repository
+$ git branch -r
+
+# Create a New Branch from a Specific Commit
+$ git branch <new-branch-name> <commit-hash>
+
 # Create a new branch
 $ git branch <branch_name>
 
-# List all remote or local branches
-$ git branch -a
+# Create and Switch to a New Branch
+$ git checkout -b <new-branch-name>
+
+# Rename a Branch
+$ git branch -m <new-branch-name>
 
 # Delete a branch
 $ git branch -d <branch_name>
@@ -233,7 +248,7 @@ Note : `It is important to note that git reset is a local operation and does not
 $ git revert <commit-hash>
 ```
 
-**git reflog**
+**git reflog** (reference log)
 - Git command that stands for "reference log." It's a useful tool for tracking and recovering your project's history, including changes to branch references, commits, and other Git operations. The git reflog command displays a log of reference updates in your repository, helping you recover lost commits or branches.
 
 ```
