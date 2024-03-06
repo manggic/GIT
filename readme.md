@@ -228,6 +228,14 @@ The commit can be a SHA-1 hash, a branch name, or a tag.
 ```
 
 ```
+# reset to a commit id ( changes comes under staged ) 
+$ git reset --soft <commit-id>
+
+# reset to previous commit-id ( changes are unstaged )
+$ git reset HEAD~1
+```
+
+```
 # To reset the current branch to the last commit
 $ git reset --hard HEAD~1
 
