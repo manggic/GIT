@@ -236,6 +236,8 @@ $ git reset HEAD~1
 ```
 
 ```
+# NOTE : subsequent commits will be completely gone in case of hard reset
+
 # To reset the current branch to the last commit
 $ git reset --hard HEAD~1
 
