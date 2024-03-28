@@ -454,8 +454,9 @@ $ git submodule update
 [interaction rebase doc](https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/) <br>
 [rewriting git history](https://www.atlassian.com/git/tutorials/rewriting-history#:~:text=You%20can%20add%20or%20remove,shared%20with%20other%20team%20members.) <br>
 
-
-
+### git cheatsheet link
+* https://www.shortcutfoo.com/app/dojos/git/cheatsheet
+* https://www.geeksforgeeks.org/git-cheat-sheet/
 
 
 
