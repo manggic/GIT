@@ -11,6 +11,27 @@
 git clone git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git
 ```
 
+**Obtain only the remote URL**
+```
+$ git config --get remote.origin.url
+$ git remote show origin
+```
+**How to ungit a directory?**
+```
+Try removing the .git directory and .gitignore if exist: rm -Rf .git .gitignore
+```
+
+**To check git config**
+```
+$ git config --list
+$ git config -l
+```
+
+**To get the date when a repository was first built?**
+```
+$ git show $(git log --oneline | tail -n 1 | cut '-d ' -f 1) | grep '^Date:'
+```
+
 **git add <file_or_directory_name>**
 - Adds files in the to the staging area for Git. Before a file is available to commit to a repository, the file needs to be added to the Git index (staging area). There are a few different ways to use git add, by adding entire directories, specific files, or all unstaged files.
 ``` 
