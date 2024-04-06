@@ -117,9 +117,11 @@ $ git checkout feature-branch
 
 # Checkout an existing branch
 $ git checkout <branch_name>
+$ git switch <new_branch>
 
 # Checkout and create a new branch with that name
 $ git checkout -b <new_branch>
+$ git switch -c <new_branch>
 
 # Rename a local branch
 $ git branch -m [old branch name] [new branch name]
