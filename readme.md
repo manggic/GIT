@@ -11,6 +11,10 @@
 git clone git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git
 ```
 
+**git fetch**
+- Running git fetch retrieves the latest changes from a remote repository without merging them into your local branches. It's a useful command to stay up-to-date with changes made by other contributors to the same repository.
+
+
 **Obtain only the remote URL**
 ```
 $ git config --get remote.origin.url
