@@ -240,7 +240,6 @@ $ git log --oneline
 $ git log -10
 ```
 
-
 **git reset**
 - Git reset is a command that moves the current head of the branch back to a specified commit. This can be used to `undo commits that have not been pushed to a remote repository`.
 
