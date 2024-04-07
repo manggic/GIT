@@ -126,8 +126,9 @@ $ git switch -c <new_branch>
 # Rename a local branch
 $ git branch -m [old branch name] [new branch name]
 
-# To discard all uncommitted changes in your working directory
+# to discard all unstaged changes
 $ git checkout .
+$ git checkout -- .
 
 # switch back to the branch you were on previously
 $ git checkout -
@@ -251,6 +252,14 @@ The commit can be a SHA-1 hash, a branch name, or a tag.
 ```
 
 ```
+# to move a file from stage area to unstage
+$ git reset HEAD <filename>
+
+# to move all file from stage area to unstage
+$ git reset HEAD .
+```
+
+```
 # reset to a commit id ( changes comes under staged ) 
 $ git reset --soft <commit-id>
 
@@ -296,13 +305,16 @@ git branch <new-branch-name> <commit-hash>
 ```
 
 **git diff**
-- Git command used to display the differences between various states of your Git repository. It allows you to compare changes between different commits, between the working directory and the staging area, or between different branches or commits. git diff is a powerful tool for reviewing and understanding the differences in your project's source code.
+- git diff lists out the changes between your current working directory and your staging area.
 
 ```
-# Compare the current working tree to the last commit
+# Compare the changes between staged and current working directory
 $ git diff
 
-# Compare the current working tree to the HEAD commit
+# compare the last commit and current staged area
+$ git diff --staged
+
+# compare both staged and unstaged changes with your last commit.
 $ git diff HEAD
 
 # Compare the file `foo.txt` to the last commit
