@@ -49,11 +49,14 @@ $ git add index.html
 $ git add css
 ```
 
-**git commit -m "Commit message in quotes"**
+**git commit**
 - Record the changes made to the files to a local repository. For easy reference, each commit has a unique ID.
 It’s best practice to include a message with each commit explaining the changes made in a commit. Adding a commit message helps to find a particular change or understanding the changes.
-```
-git commit -m "My first commit message"
+```bash
+$ git commit -m "My first commit message"
+
+# this is for both add to stage and commit in one command
+$ git commit -am "commit message"
 ```
 
 **git status**
@@ -190,35 +193,23 @@ You might use `git stash` if you want to temporarily switch branches without com
 ```
 # This will save your changes to a local stash
 $ git stash 
-```
 
-```
 # List all of your stashed changes
 $ git stash list
-```
 
-```
 # To see changes made in a stash
 $ git stash show -p <stash_name>
-```
 
-```
 # To retrieve your stashed changes
 $ git stash apply
 $ git stash pop
-```
 
-```
 # Clear all of your stashed changes
 $ git stash clear
-```
 
-```
 # Drop a specific stashed change
 $ git stash drop <stash_name>
-```
 
-```
 # To apply a specific stash, you can specify it by name
 $ git stash apply stash@{1}
 ```
