@@ -108,6 +108,8 @@ $ git branch -D [branch name]
 $ git push origin --delete [branch name]
 $ git push origin -d <branch_name>
 
+# Get current brnach name
+$ git branch --show-current
 ```
 
 **git checkout**
